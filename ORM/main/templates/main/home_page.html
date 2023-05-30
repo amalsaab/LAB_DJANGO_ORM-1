@@ -1,4 +1,6 @@
 {% extends 'main/base.html' %}
+
+{% block title%}view Blog{% endblock %}
 {% block body %}
 <div class="row mb-2">
     {% for blog in blogs %}
@@ -7,8 +9,9 @@
             <div class="col p-4 d-flex flex-column position-static">
                 <h3 class="mb-0">{{ blog.title }}</h3>
                 <div class="mb-1 text-body-secondary">{{ blog.publish_date }}</div>
-                <p class="card-text mb-auto">{{blog.contant}}</p>
-                <a href="#" class="stretched-link">Continue reading</a>
+                <div class="container" style="padding-top: 6rem;" >
+                    <a style="width: 14rem;" href="{% url 'main:read_blog' blog.id %}" class="p-2 stretched-link btn btn-secondary">Continue reading</a>
+                </div>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>

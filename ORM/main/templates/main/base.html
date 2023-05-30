@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.111.3">
-    <title>Blog Template · Bootstrap v5.3</title>
+    <title>{% block title%}Blog Template{% endblock %}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
 
@@ -118,7 +118,7 @@
 <div class="container">
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-evenly">
-      <a class="p-2 link-secondary" href="{% url 'main:home_page' %}">Show</a>
+      <a class="p-2 link-secondary" href="{% url 'main:home_page' %}">View</a>
       <a class="blog-header-logo text-body-emphasis p-2 link-secondary" href="{% url 'main:home_page' %}"><img class="bi me-2" width="35px" height="32px" src="{% static 'image/blogger.png' %}" alt=""></a>
       <a class="p-2 link-secondary" href="{% url 'main:add_page' %}">Add</a>
     </nav>
